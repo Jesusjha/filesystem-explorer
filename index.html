@@ -26,7 +26,10 @@
                         <div class="buttons_container">
                             <div class="d-grid"> <a href="javascript:;" class="btn btn-primary">New folder</a>
                             </div>
-                            <div class="d-grid"> <a href="javascript:;" class="btn btn-primary">Add File</a>
+                            <div class="d-grid">
+                                <input type="file" id="selectedFile"/>
+                                <input type="button" value="Add File" class="btn btn-primary" 
+                                    onclick="document.getElementById('selectedFile').click();" />
                             </div>
                         </div>
                         <h5 class="my-3">My Drive</h5>
