@@ -1,6 +1,4 @@
 <?php
-
-if (isset($_POST['upload'])) {
     
     $file = $_FILES['file'];
     print_r($file);
@@ -12,5 +10,3 @@ if (isset($_POST['upload'])) {
 
     $fileExt = explode(".", $fileName);
     $fileOnlyExt = strtolower(end($fileExt));
-
-}
