@@ -33,12 +33,45 @@
 							<!-- ! PRUEBA JESUS SUBIR ARCHIVO -->
 
 							
-								<form method="POST" action="add-file.php" enctype="multipart/form-data">
+								<!-- <form method="POST" action="add-file.php" enctype="multipart/form-data">
 									<label class="btn btn-success fileinput-button">
-										Add file<input type="file" name="file" hidden>
-										<button type="submit" name="upload" > hola</button>
+										Add file<input type="file" name="file">
+										<button type="submit" name="upload">hola</button>
 									</label>
-								</form>
+								</form> -->
+
+                               <!--  <div class="d-grid">
+                                    <form method="POST" action="add-file.php" enctype="multipart/form-data">
+                                        <input type="file" name="file" id="selectedFile" />
+                                        <input type="button" value="Add File" name="upload" class="btn btn-primary"
+                                            onclick="document.getElementById('selectedFile').click();" />
+                                    </form>
+                                </div> -->
+
+                                <!-- ? intento 3 -->
+
+                                <!-- <div class="d-grid">
+                                    <form method="POST" action="add-file.php" enctype="multipart/form-data">
+                                            <input type="file" name="file" hidden>
+                                            <button type="submit" name="upload" class="btn btn-primary">Add file</button>
+                                    </form>
+                                </div> -->
+
+                                <!-- ? intento 4 -->
+
+                                <div class="d-grid">
+                                    <form method="POST" action="add-file.php" enctype="multipart/form-data">
+                                        <label class="btn btn-primary">Add file
+                                            <input type="file" name="file" hidden onchange="form.submit()" >
+                                        </label>
+                                    </form>
+                                </div>
+
+                                <!--  <div class="d-grid">
+                                    <input type="file" id="selectedFile" />
+                                    <input type="button" value="Add File" class="btn btn-primary"
+                                        onclick="document.getElementById('selectedFile').click();" />
+                                </div> -->
 							
 
 							<!-- ! PRUEBA JESUS SUBIR ARCHIVO -->
