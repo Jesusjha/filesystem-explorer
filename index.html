@@ -29,11 +29,20 @@
                                     New folder
                                 </button>
                             </div>
-                            <div class="d-grid">
-                                <input type="file" id="selectedFile" />
-                                <input type="button" value="Add File" class="btn btn-primary"
-                                    onclick="document.getElementById('selectedFile').click();" />
-                            </div>
+
+							<!-- ! PRUEBA JESUS SUBIR ARCHIVO -->
+
+							
+								<form method="POST" action="add-file.php" enctype="multipart/form-data">
+									<label class="btn btn-success fileinput-button">
+										Add file<input type="file" name="file" hidden>
+										<button type="submit" name="upload" > hola</button>
+									</label>
+								</form>
+							
+
+							<!-- ! PRUEBA JESUS SUBIR ARCHIVO -->
+
 
                             <!-- Modal -->
                             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
