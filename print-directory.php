@@ -16,25 +16,18 @@
                     </div>
                     <h6 class='mb-0 text-primary'>$dirs[$pos]</h6>
                     
-                    <div class='btn-group'>
-                    <button type='button' class='btn btn-success dropdown-toggle dropdown-toggle-split'data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
-                    </button>
-                    <div class='dropdown-menu'>
+                    
                     <form action='remove-directories.php' method='post'>
-                        <button class='dropdown-item' href='#'>Modify</button>
-                        <div class='dropdown-divider'></div>
-                        <button type='submit' name='delete' value='$dirs[$pos]' class='dropdown-item' href='#'>Delete</button>
+                        <button class='dropdown-item' href='#'><i class='bx bxs-edit'></i></button>
+                        <button type='submit' name='delete' value='$dirs[$pos]' class='dropdown-item' href='#'><i class='bx bxs-trash'></i></button>
                     </form>
-                    </div>
-                    </div>
+                    
 
                 </div>
             </div>
         </div>";
         }
     } 
-
-
 
 
 
