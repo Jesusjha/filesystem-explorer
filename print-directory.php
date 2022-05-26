@@ -11,17 +11,28 @@
                         <div class='font-30 text-primary'><i class='bx bxs-folder'></i>
                         </div>
                         <div class='user-groups ms-auto'>
-                            <img src='https://bootdey.com/img/Content/avatar/avatar1.png' width='35'
-                                height='35' class='rounded-circle' alt='>
-                            <img src='https://bootdey.com/img/Content/avatar/avatar2.png' width='35'
-                                height='35' class='rounded-circle' alt='>
                         </div>
-                        <div class='user-plus'>+</div>
                     </div>
                     <h6 class='mb-0 text-primary'>$dirs[$pos]</h6>
-                    <small>15 files</small>
+                    
+                    <div class='btn-group'>
+                    <button type='button' class='btn btn-success dropdown-toggle dropdown-toggle-split'data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+                    </button>
+                    <div class='dropdown-menu'>
+                    <a class='dropdown-item' href='#'>Modify</a>
+                    <div class='dropdown-divider'></div>
+                    <a class='dropdown-item' href='#'>Delete</a>
+                    </div>
+                    </div>
+
                 </div>
             </div>
         </div>";
         }
     } 
+
+
+
+
+
+                
