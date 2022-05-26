@@ -1,5 +1,6 @@
 <?php
 
+
     $dirs = array_slice(scandir("./root"), 2);
     //loop through the array and print the names of the directories
     if (count($dirs) > 0) {
@@ -19,9 +20,11 @@
                     <button type='button' class='btn btn-success dropdown-toggle dropdown-toggle-split'data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
                     </button>
                     <div class='dropdown-menu'>
-                    <a class='dropdown-item' href='#'>Modify</a>
-                    <div class='dropdown-divider'></div>
-                    <a class='dropdown-item' href='#'>Delete</a>
+                    <form action='remove-directories.php' method='post'>
+                        <button class='dropdown-item' href='#'>Modify</button>
+                        <div class='dropdown-divider'></div>
+                        <button type='submit' name='delete' value='$dirs[$pos]' class='dropdown-item' href='#'>Delete</button>
+                    </form>
                     </div>
                     </div>
 
@@ -30,6 +33,8 @@
         </div>";
         }
     } 
+
+
 
 
 
