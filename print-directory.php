@@ -15,13 +15,12 @@
                         </div>
                     </div>
                     <h6 class='mb-0 text-primary'>$dirs[$pos]</h6>
-                    
-                    
+
+                    <button type='button' data-toggle='modal' data-target='#exampleModalCenter' class='dropdown-item' href='#'><i class='bx bxs-edit'></i></button>
                     <form action='remove-directories.php' method='post'>
-                        <button class='dropdown-item' href='#'><i class='bx bxs-edit'></i></button>
                         <button type='submit' name='delete' value='$dirs[$pos]' class='dropdown-item' href='#'><i class='bx bxs-trash'></i></button>
                     </form>
-                    
+
 
                 </div>
             </div>

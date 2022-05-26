@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 
 function createDirectory(){
     if ($_POST) {
@@ -10,8 +10,11 @@ function createDirectory(){
     if(!is_dir($newFolder)){
         mkdir($newFolder, 0777);
     } 
+    $_SESSION['name'] = $create;
+    
 }   
 }
+
 
 
 
