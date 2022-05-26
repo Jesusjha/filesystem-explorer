@@ -9,8 +9,6 @@ function createDirectory(){
     //If the directory of $newFolder does not exist, create it. 
     if(!is_dir($newFolder)){
         mkdir($newFolder, 0777);
-    } else {
-        echo "The directory already exists.";
     } 
 }   
 }

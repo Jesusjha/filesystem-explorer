@@ -59,15 +59,11 @@ createDirectory();
                                             </button>
                                         </div>
 
-
-                                        
-										<div class="modal-body">
-											
-											<form class="modal-body" action="" method="post"> <!-- todo -->
+											<form method="post"> <!-- todo -->
 											<input id="folderName" type="text" name="create">
 											<div class="modal-footer">
 												<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-												<button id="createFolderBtn" type="submit" class="btn btn-primary">Create
+												<button id="createFolderBtn" type="submit" class="btn btn-primary">Create</button>
 											</div>
 											</form> <!-- todo -->
                                         </div>
@@ -391,9 +387,6 @@ createDirectory();
 
 
 
-    <script type="text/javascript">
-
-    </script>
 </body>
 
 </html>

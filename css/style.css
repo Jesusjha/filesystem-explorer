@@ -106,7 +106,3 @@ body {
     flex-direction: row;
     justify-content: space-around;
 }
-
-input[type="file"]{
-    display: none;
-    }
