@@ -1,3 +1,27 @@
+<?php
+
+
+
+if ($_POST) {
+    $create=$_POST['create'];
+
+    $newFolder = "./root/".$create;
+    //If the directory of $newFolder does not exist, create it. 
+    if(!is_dir($newFolder)){
+        mkdir($newFolder, 0777);
+    } else {
+        echo "The directory already exists.";
+    } 
+}   
+
+
+
+    $dirs = array_slice(scandir("./root"), 2);
+
+
+    //loop through the array and print the names of the directories
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -56,7 +80,7 @@
                                         
 										<div class="modal-body">
 											
-											<form class="modal-body" action="./create-directory.php" method="get"> <!-- todo -->
+											<form class="modal-body" action="" method="post"> <!-- todo -->
 											<input id="folderName" type="text" name="create">
 											<div class="modal-footer">
 												<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
@@ -170,71 +194,34 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="row mt-3">
-                            <div class="col-12 col-lg-4">
-                                <div class="card shadow-none border radius-15">
-                                    <div class="card-body">
-                                        <div class="d-flex align-items-center">
-                                            <div class="fm-icon-box radius-15 bg-primary text-white"><i
-                                                    class="lni lni-google-drive"></i>
-                                            </div>
-                                            <div class="ms-auto font-24"><i class="fa fa-ellipsis-h"></i>
-                                            </div>
-                                        </div>
-                                        <h5 class="mt-3 mb-0">Google Drive</h5>
-                                        <p class="mb-1 mt-4"><span>45.5 GB</span> <span class="float-end">50 GB</span>
-                                        </p>
-                                        <div class="progress" style="height: 7px;">
-                                            <div class="progress-bar bg-primary" role="progressbar" style="width: 75%;"
-                                                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-4">
-                                <div class="card shadow-none border radius-15">
-                                    <div class="card-body">
-                                        <div class="d-flex align-items-center">
-                                            <div class="fm-icon-box radius-15 bg-danger text-white"><i
-                                                    class="lni lni-dropbox-original"></i>
-                                            </div>
-                                            <div class="ms-auto font-24"><i class="fa fa-ellipsis-h"></i>
-                                            </div>
-                                        </div>
-                                        <h5 class="mt-3 mb-0">Dropbox</h5>
-                                        <p class="mb-1 mt-4"><span>1,2 GB</span> <span class="float-end">3 GB</span>
-                                        </p>
-                                        <div class="progress" style="height: 7px;">
-                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 45%;"
-                                                aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-4">
-                                <div class="card shadow-none border radius-15">
-                                    <div class="card-body">
-                                        <div class="d-flex align-items-center">
-                                            <div class="fm-icon-box radius-15 bg-warning text-dark"><i
-                                                    class="bx bxs-door-open"></i>
-                                            </div>
-                                            <div class="ms-auto font-24"><i class="fa fa-ellipsis-h"></i>
-                                            </div>
-                                        </div>
-                                        <h5 class="mt-3 mb-0">OneDrive</h5>
-                                        <p class="mb-1 mt-4"><span>2,5 GB</span> <span class="float-end">3 GB</span>
-                                        </p>
-                                        <div class="progress" style="height: 7px;">
-                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 65%;"
-                                                aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                        <!--end row-->
+
                         <h5>Folders</h5>
                         <div id="folderContainer" class="row mt-3">
+                            <?php
+                            if (count($dirs) > 0) {
+                                foreach($dirs as $pos => $dir){
+                                    echo "<div class='col-12 col-lg-4'>
+                                    <div class='card shadow-none border radius-15'>
+                                        <div class='card-body'>
+                                            <div class='d-flex align-items-center'>
+                                                <div class='font-30 text-primary'><i class='bx bxs-folder'></i>
+                                                </div>
+                                                <div class='user-groups ms-auto'>
+                                                    <img src='https://bootdey.com/img/Content/avatar/avatar1.png' width='35'
+                                                        height='35' class='rounded-circle' alt='>
+                                                    <img src='https://bootdey.com/img/Content/avatar/avatar2.png' width='35'
+                                                        height='35' class='rounded-circle' alt='>
+                                                </div>
+                                                <div class='user-plus'>+</div>
+                                            </div>
+                                            <h6 class='mb-0 text-primary'>$dirs[$pos]</h6>
+                                            <small>15 files</small>
+                                        </div>
+                                    </div>
+                                </div>";
+                                }
+                            } 
+                            ?>
                             <div class="col-12 col-lg-4">
                                 <div class="card shadow-none border radius-15">
                                     <div class="card-body">
