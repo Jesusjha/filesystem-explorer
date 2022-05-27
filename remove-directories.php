@@ -1,26 +1,17 @@
 <?php
 
 
-
-function deleteAll($root) {
-    if ($_POST) {
-        foreach(glob($root . '/*') as $file) {
-        if(is_dir($file)){
-            deleteAll($file);
+function deleteDirectory($path){
+    if(is_dir($path)){
+        $files = glob($path . '/*');
+        foreach($files as $file){
+            deleteDirectory($file);
         }
-        else
-        unlink($file);
-        }
-        rmdir($root);
+        rmdir($path);
+    } else {
+        unlink($path);
     }
     header("Location: ./index.php");
 }
 
-
-$folderName= $_POST['delete'];
-
-
-deleteAll("./root/$folderName");
-
-
-
+deleteDirectory("./root/".$_POST['delete']);

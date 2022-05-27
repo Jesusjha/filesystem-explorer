@@ -8,6 +8,4 @@ if ($_POST) {
     rename("./root/".$oldName, "./root/".$newName);
 
     header("Location: ./index.php");
-}   
-
-print_r($edit);
+}

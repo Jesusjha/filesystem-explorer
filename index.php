@@ -40,9 +40,11 @@ createDirectory();
 
                                 <div class="d-grid">
                                     <form method="POST" action="add-file.php" enctype="multipart/form-data">
-                                        <label class="btn btn-primary">Add file
+                                        <!-- <label class="btn btn-primary">Add file
                                             <input type="file" name="file" hidden onchange="form.submit()" >
-                                        </label>
+                                        </label> -->
+                                        <input type="file" name="file">
+                                        <button type="submit">Add file</button>
                                     </form>
                                 </div>
 
