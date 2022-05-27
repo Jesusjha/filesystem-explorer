@@ -1,16 +1,11 @@
 <?php
 
-session_start();
-echo $_SESSION['name'];
-echo $_SESSION['folderName'];
-
-
 if ($_POST) {
-    $edit=$_POST['edit'];
+    $folderName=$_POST['oldName'];
+    $newName=$_POST['newName'];
     
     //Rename the directory to the new name, allowing to edit it multiple times
-    rename("./root/".$_SESSION['folderName'], "./root/".$edit);
-    $_SESSION['folderName'] = $edit; 
+    rename("./root/".$folderName, "./root/".$newName);
 
     header("Location: ./index.php");
 }   
