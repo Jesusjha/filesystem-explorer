@@ -2,9 +2,9 @@
 
 session_start();
 
-function deleteAll($root) {
+function deleteAll($root, $dFile) {
     if ($_POST) {
-        foreach(glob($root . '/*') as $file) {
+        foreach(glob($dFile) as $file) {
         if(is_dir($file)){
             deleteAll($file);
         }
@@ -16,11 +16,12 @@ function deleteAll($root) {
     header("Location: ./index.php");
 }
 
+$dFile = './root/ati-cachorro.jpg';
 
 $folderName= $_POST['delete'];
 $_SESSION['folderName'] = $folderName;
 
-deleteAll("./root/$folderName");
+deleteAll("./root/$folderName", "./root/ati-cachorro.jpg");
 
 
 
