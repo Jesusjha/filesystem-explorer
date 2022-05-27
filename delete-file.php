@@ -1,7 +1,7 @@
 <?php
 
-session_start();
+// session_start();
 
-$dFile = './root/ati-cachorro.jpg';
+// $delFile = './root/ati-cachorro.jpg';
 
-unlink($dFile);
+// unlink($delFile);
