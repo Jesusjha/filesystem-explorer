@@ -414,10 +414,6 @@ createDirectory();
         </div>
     </div>
 
-
-
-
-    </script>
 </body>
 
 </html>
