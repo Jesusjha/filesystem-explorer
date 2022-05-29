@@ -12,7 +12,7 @@ createDirectory();
     <meta charset="utf-8">
     <!--  This file has been downloaded from bootdey.com @bootdey on twitter -->
     <!--  All snippets are MIT license http://bootdey.com/license -->
-    <title>file managaer page - Bootdey.com</title>
+    <title>File Manager</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -40,9 +40,6 @@ createDirectory();
 
                                 <div class="d-grid">
                                     <form method="POST" action="add-file.php" enctype="multipart/form-data">
-                                        <!-- <label class="btn btn-primary">Add file
-                                            <input type="file" name="file" hidden onchange="form.submit()" >
-                                        </label> -->
                                         <input type="file" name="file">
                                         <button type="submit">Add file</button>
                                     </form>

@@ -4,3 +4,4 @@ const openEditFolderModal = (folderName) => {
   const inputOldName = document.getElementById("inputOldName");
   inputOldName.value = folderName;
 };
+

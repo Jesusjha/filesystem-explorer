@@ -8,7 +8,9 @@
             echo "<div class='col-12 col-lg-4'>
             <div class='card shadow-none border radius-15'>
                 <div class='card-body'>
-                <a href='#'>
+                <form id='navigateForm' action='navigate.php' method='post' >
+               
+                <a id='navigateLink'>
                     <div class='d-flex align-items-center'>
                         <div class='font-30 text-primary'><i class='bx bxs-folder'></i>
                         </div>
@@ -16,7 +18,8 @@
                         </div>
                         </div>
                         </a>
-                    <h6 class='mb-0 text-primary'>$dirs[$pos]</h6>
+                      <input class='btn btn-light mb-0 text-primary' type='submit' name='folder' value='$dirs[$pos]'>
+                    </form>
 
                     <button type='button' onclick='openEditFolderModal(\"$dirs[$pos]\")' class='dropdown-item''><i class='bx bxs-edit'></i></button>
 
