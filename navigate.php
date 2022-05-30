@@ -28,60 +28,10 @@
                 ?>
                 </h5>
                 <div id="folderContainer" class="row mt-3">
-                    <div class="col-12 col-lg-4">
-                        <div class="card shadow-none border radius-15">
-                            <div class="card-body">
-                                <div class="d-flex align-items-center">
-                                    <div class="font-30 text-primary"><i class="bx bxs-folder"></i>
-                                    </div>
-                                    <div class="user-groups ms-auto">
-                                        <img src="https://bootdey.com/img/Content/avatar/avatar1.png" width="35"
-                                            height="35" class="rounded-circle" alt="">
-                                        <img src="https://bootdey.com/img/Content/avatar/avatar2.png" width="35"
-                                            height="35" class="rounded-circle" alt="">
-                                    </div>
-                                    <div class="user-plus">+</div>
-                                </div>
-                                <h6 class="mb-0 text-primary">Analytics</h6>
-                                <small>15 files</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <div class="card shadow-none border radius-15">
-                            <div class="card-body">
-                                <div class="d-flex align-items-center">
-                                    <div class="font-30 text-primary"><i class="bx bxs-folder"></i>
-                                    </div>
-                                    <div class="user-groups ms-auto">
-                                        <img src="https://bootdey.com/img/Content/avatar/avatar7.png" width="35"
-                                            height="35" class="rounded-circle" alt="">
-                                    </div>
-                                </div>
-                                <h6 class="mb-0 text-primary">Assets</h6>
-                                <small>345 files</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <div class="card shadow-none border radius-15">
-                            <div class="card-body">
-                                <div class="d-flex align-items-center">
-                                    <div class="font-30 text-primary"><i class="bx bxs-folder"></i>
-                                    </div>
-                                    <div class="user-groups ms-auto">
-                                        <img src="https://bootdey.com/img/Content/avatar/avatar2.png" width="35"
-                                            height="35" class="rounded-circle" alt="">
-                                        <img src="https://bootdey.com/img/Content/avatar/avatar3.png" width="35"
-                                            height="35" class="rounded-circle" alt="">
-                                    </div>
-                                </div>
-                                <h6 class="mb-0 text-primary">Marketing</h6>
-                                <small>143 files</small>
-                            </div>
+
                         </div>
                         <?php
-                                
+                                include_once ('./print-file.php');
                             ?>
                         <a href="./index.php"><button type="button" class="btn btn-info">Back</button></a>
                         <form method="POST" action="print-file.php" enctype="multipart/form-data">
