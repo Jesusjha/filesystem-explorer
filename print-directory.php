@@ -42,7 +42,8 @@
                             </div>
                             </div>
 
-                        <div class='btn btn-light text-primary'>$dirs[$pos]</div>
+                          
+                        <div class='btn btn-light text-primary'><a href='./root/$dir'>$dir</div></a>
                         </form>
 
                         <button type='button' onclick='openEditFolderModal(\"$dirs[$pos]\")' class='dropdown-item''><i class='bx bxs-edit'></i></button>

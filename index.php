@@ -193,10 +193,12 @@ createDirectory();
                     <div class="card-body">
                         <div class="fm-search">
                             <div class="mb-0">
+                                <form name="myForm" action="search-file.php" method="post">
                                 <div class="input-group input-group-lg"> <span
-                                        class="input-group-text bg-transparent"><i class="fa fa-search"></i></span>
-                                    <input type="text" class="form-control" placeholder="Search the files">
+                                        class="input-group-text bg-transparent" onclick="myForm.submit()"><i class="fa fa-search"></i></span>
+                                    <input type="text" name="search" class="form-control" placeholder="Search the files">
                                 </div>
+                                </form>
                             </div>
                         </div>
 
