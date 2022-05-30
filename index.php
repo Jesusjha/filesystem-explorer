@@ -30,20 +30,18 @@ createDirectory();
             <div class="col-12 col-lg-3">
                 <div class="card">
                     <div class="card-body">
-                        <div class="buttons_container">
-                            <div class="d-grid">
+                        <div class="d-grid">
                                 <button id="newFolderBtn" type="button" class="btn btn-primary" data-toggle="modal"
                                     data-target="#exampleModal">
                                     New folder
                                 </button>
-                            </div>
 
-                                <div class="d-grid">
                                     <form method="POST" action="add-file.php" enctype="multipart/form-data">
-                                        <input type="file" name="file">
-                                        <button type="submit">Add file</button>
+                                    <label for="files" class="btn btn-primary">Add file</label>
+                                    <input id="files" style="visibility:hidden;" type="file" name="file" onchange="this.form.submit()">
                                     </form>
-                                </div>
+                               
+                                
 
 
                             <!-- Modal -->

@@ -33,13 +33,12 @@
                         <?php
                                 include_once ('./print-file.php');
                             ?>
-                        <a href="./index.php"><button type="button" class="btn btn-info">Back</button></a>
                         <form method="POST" action="print-file.php" enctype="multipart/form-data">
-                        <input type="file" name="fileInFolder">
-                        <input type="hidden" name="folder" value="<?= $folderName ?>">    
-
-                                        <button type="submit">Add file</button>
+                            <label for="files" class="btn btn-primary">Add file</label>
+                            <input id="files" style="visibility:hidden;" type="file" name="fileInFolder" onchange="this.form.submit()">
+                            <input type="hidden" name="folder" value="<?= $folderName ?>">    
                         </form>
+                        <a href="./index.php"><button type="button" class="btn btn-info">Back</button></a>
                     </div>
                 </div>
                
