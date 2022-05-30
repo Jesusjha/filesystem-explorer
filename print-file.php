@@ -1,19 +1,19 @@
 <?php
 
 include_once('./file-size.php');
+include('show-icon.php');
 
 $folderName = $_POST['folder'];
 
 if ($_FILES){
     $dir = "./root/$folderName" . "/";
     $path = $dir . $_FILES['fileInFolder']['name'];
-    
+        
     if (!file_exists($dir)) {
         mkdir($dir, 0777);
     }
     
     if(move_uploaded_file($_FILES['fileInFolder']['tmp_name'], $path)) {
-        //header ('Location: index.php');
         echo "<script>alert('File uploaded successfully');window.location= 'index.php'</script>";
     } 
     
@@ -34,10 +34,12 @@ if (count($dirs) > 0) {
         $fileTimeModify = date("F d Y H:i:s.", filemtime($file));
         $fileCreationDate = date("F d Y H:i:s.", filectime($file));
 
+
        echo "<div class='main-container card shadow-none border radius-15'>
    
            <div class='card-body row'>
                 <div class='col-sm'>
+                <img src=" . getIcons($fileOnlyExt) .">
                <h6 class='mb-0 text-primary'><a href='./root/$folderName/$dir'>$dir</h6></a>
 
            <form action='delete-file.php' method='post'>
@@ -69,7 +71,6 @@ if (count($dirs) > 0) {
            </div>
            </div>
    </div>";
-
     }
 }
 ?>
