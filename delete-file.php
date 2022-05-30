@@ -7,6 +7,7 @@ if (isset($_POST['deleteFile'])) {
     $parentFolder = $_POST['parentFolder'];
     $dir = "./root/" . $parentFolder . "/". $fileName;
     unlink($dir);
-    header ('Location: index.php');
+    //header ('Location: index.php');
+    echo "<script>alert('File deleted successfully');window.location= 'index.php'</script>";
 }
 
