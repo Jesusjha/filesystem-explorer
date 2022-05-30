@@ -6,14 +6,7 @@ $folderName = $_POST['folder'];
 if ($_FILES){
     $dir = "./root/$folderName" . "/";
     $path = $dir . $_FILES['fileInFolder']['name'];
-    $name = $_FILES['fileInFolder']['name'];
-    $fileExt = explode('.',$name);
-    $fileActExt = strtolower(end($fileExt));
-    
-
-
-
-            
+        
     if (!file_exists($dir)) {
         mkdir($dir, 0777);
     }
@@ -29,6 +22,9 @@ $dirs = array_slice(scandir("./root/" . $folderName), 2);
 //loop through the array and print the names of the directories
 if (count($dirs) > 0) {
     foreach($dirs as $pos => $dir){
+    $name = $dir;
+    $fileExt = explode('.',$name);
+    $fileActExt = strtolower(end($fileExt));
         // $src = getIcons($fileActExt);
     echo "<div class='container-fluid'>
     <div class='card shadow-none border radius-15'>
