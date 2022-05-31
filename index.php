@@ -1,7 +1,11 @@
 <?php
 
 require_once("./create-directory.php");
+include("./main-file-size.php");
+include_once('./file-size.php');
 createDirectory();
+
+
 
 ?>
 
@@ -207,64 +211,14 @@ createDirectory();
                             <?php
                                 include_once("./print-directory.php");
                             ?>
-                            <div class="col-12 col-lg-4">
-                                <div class="card shadow-none border radius-15">
-                                    <div class="card-body">
-                                        <div class="d-flex align-items-center">
-                                            <div class="font-30 text-primary"><i class="bx bxs-folder"></i>
-                                            </div>
-                                            <div class="user-groups ms-auto">
-                                                <img src="https://bootdey.com/img/Content/avatar/avatar1.png" width="35"
-                                                    height="35" class="rounded-circle" alt="">
-                                                <img src="https://bootdey.com/img/Content/avatar/avatar2.png" width="35"
-                                                    height="35" class="rounded-circle" alt="">
-                                            </div>
-                                            <div class="user-plus">+</div>
-                                        </div>
-                                        <h6 class="mb-0 text-primary">Analytics</h6>
-                                        <small>15 files</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-4">
-                                <div class="card shadow-none border radius-15">
-                                    <div class="card-body">
-                                        <div class="d-flex align-items-center">
-                                            <div class="font-30 text-primary"><i class="bx bxs-folder"></i>
-                                            </div>
-                                            <div class="user-groups ms-auto">
-                                                <img src="https://bootdey.com/img/Content/avatar/avatar7.png" width="35"
-                                                    height="35" class="rounded-circle" alt="">
-                                            </div>
-                                        </div>
-                                        <h6 class="mb-0 text-primary">Assets</h6>
-                                        <small>345 files</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-4">
-                                <div class="card shadow-none border radius-15">
-                                    <div class="card-body">
-                                        <div class="d-flex align-items-center">
-                                            <div class="font-30 text-primary"><i class="bx bxs-folder"></i>
-                                            </div>
-                                            <div class="user-groups ms-auto">
-                                                <img src="https://bootdey.com/img/Content/avatar/avatar2.png" width="35"
-                                                    height="35" class="rounded-circle" alt="">
-                                                <img src="https://bootdey.com/img/Content/avatar/avatar3.png" width="35"
-                                                    height="35" class="rounded-circle" alt="">
-                                            </div>
-                                        </div>
-                                        <h6 class="mb-0 text-primary">Marketing</h6>
-                                        <small>143 files</small>
-                                    </div>
-                                </div>
-                            </div>
+                            
+                            
+                            
                         </div>
                         <!--end row-->
                         <div class="d-flex align-items-center">
                             <div>
-                                <h5 class="mb-0">Recent Files</h5>
+                                <h5 class="mb-0">Folders info</h5>
                             </div>
                             <div class="ms-auto"><a href="javascript:;" class="btn btn-sm btn-outline-secondary">View
                                     all</a>
@@ -272,140 +226,57 @@ createDirectory();
                         </div>
                         <div class="table-responsive mt-3">
                             <table class="table table-striped table-hover table-sm mb-0">
+                                
                                 <thead>
                                     <tr>
-                                        <th>Name <i class="bx bx-up-arrow-alt ms-2"></i>
+                                        <th class="col-3">Name <i class="bx bx-up-arrow-alt ms-2"></i>
                                         </th>
-                                        <th>Members</th>
-                                        <th>Last Modified</th>
-                                        <th></th>
+                                        <th class="col-3">Creation date</th>
+                                        <th class="col-4">Last Modified</th>
+                                        <th class="col-3">Size</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <div><i class="bx bxs-file-pdf me-2 font-24 text-danger"></i>
-                                                </div>
-                                                <div class="font-weight-bold text-danger">Competitor Analysis Template
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>Only you</td>
-                                        <td>Sep 3, 2019</td>
-                                        <td><i class="fa fa-ellipsis-h font-24"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <div><i class="bx bxs-file me-2 font-24 text-primary"></i>
-                                                </div>
-                                                <div class="font-weight-bold text-primary">How to Create a Case Study
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>3 members</td>
-                                        <td>Jun 12, 2019</td>
-                                        <td><i class="fa fa-ellipsis-h font-24"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <div><i class="bx bxs-file me-2 font-24 text-primary"></i>
-                                                </div>
-                                                <div class="font-weight-bold text-primary">Landing Page Structure</div>
-                                            </div>
-                                        </td>
-                                        <td>10 members</td>
-                                        <td>Jul 17, 2019</td>
-                                        <td><i class="fa fa-ellipsis-h font-24"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <div><i class="bx bxs-file-pdf me-2 font-24 text-danger"></i>
-                                                </div>
-                                                <div class="font-weight-bold text-danger">Meeting Report</div>
-                                            </div>
-                                        </td>
-                                        <td>5 members</td>
-                                        <td>Aug 28, 2019</td>
-                                        <td><i class="fa fa-ellipsis-h font-24"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <div><i class="bx bxs-file me-2 font-24 text-primary"></i>
-                                                </div>
-                                                <div class="font-weight-bold text-primary">Project Documents</div>
-                                            </div>
-                                        </td>
-                                        <td>Only you</td>
-                                        <td>Aug 17, 2019</td>
-                                        <td><i class="fa fa-ellipsis-h font-24"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <div><i class="bx bxs-file-doc me-2 font-24 text-success"></i>
-                                                </div>
-                                                <div class="font-weight-bold text-success">Review Checklist Template
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>7 members</td>
-                                        <td>Sep 8, 2019</td>
-                                        <td><i class="fa fa-ellipsis-h font-24"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <div><i class="bx bxs-file me-2 font-24 text-primary"></i>
-                                                </div>
-                                                <div class="font-weight-bold text-primary">How to Create a Case Study
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>3 members</td>
-                                        <td>Jun 12, 2019</td>
-                                        <td><i class="fa fa-ellipsis-h font-24"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <div><i class="bx bxs-file me-2 font-24 text-primary"></i>
-                                                </div>
-                                                <div class="font-weight-bold text-primary">Landing Page Structure</div>
-                                            </div>
-                                        </td>
-                                        <td>10 members</td>
-                                        <td>Jul 17, 2019</td>
-                                        <td><i class="fa fa-ellipsis-h font-24"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <div><i class="bx bxs-file-doc me-2 font-24 text-success"></i>
-                                                </div>
-                                                <div class="font-weight-bold text-success">Review Checklist Template
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>7 members</td>
-                                        <td>Sep 8, 2019</td>
-                                        <td><i class="fa fa-ellipsis-h font-24"></i>
-                                        </td>
-                                    </tr>
-                                </tbody>
                             </table>
+
+                                <?php
+                                
+                                $directories = array_slice(scandir("./root/"), 2);
+                                if(count($directories) > 0) {
+                                    foreach($directories as $direct) {
+                                        $totalSize = 0;
+                                        $directory = "./root/" . $direct;
+                                        $directorySize = filesize($directory);
+                                        $directoryTimeModify = date("F d Y H:i:s.", filemtime($directory));
+                                        $directoryCreationDate = date("F d Y", filectime($directory));
+
+                                        $files = array_slice(scandir("./root/" . "/" . $direct), 2);
+                                        foreach($files as $pos => $file) {
+                                            $rootSize = "./root/" . $direct . "/" . $file;
+                                            $showSize = filesize($rootSize);
+                                            $totalSize += $showSize;
+                                        }
+                                        echo "<table  class='table table-striped table-hover table-sm mb-0'>
+                                            <tbody>
+        
+                                            <tr>
+                                                <td class='col-3'>$direct</td>
+                                                <td class='col-3'>$directoryCreationDate</td>
+                                                <td class='col-4'>$directoryTimeModify</td>
+                                                <td class='col-3'>" . fileSizeUnit($totalSize) . "</td>
+                                            </tr>
+                    
+        
+                                        </tbody>
+                                    </table>";
+
+                                    
+                                
+                                
+                                
+
+                        }
+                    }
+                            ?>
                         </div>
                     </div>
                 </div>
