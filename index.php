@@ -2,6 +2,7 @@
 
 require_once("./create-directory.php");
 include("./main-file-size.php");
+include_once('./file-size.php');
 createDirectory();
 
 
@@ -215,7 +216,7 @@ createDirectory();
                         <!--end row-->
                         <div class="d-flex align-items-center">
                             <div>
-                                <h5 class="mb-0">Recent Files</h5>
+                                <h5 class="mb-0">Folders info</h5>
                             </div>
                             <div class="ms-auto"><a href="javascript:;" class="btn btn-sm btn-outline-secondary">View
                                     all</a>
@@ -240,6 +241,7 @@ createDirectory();
                                 $directories = array_slice(scandir("./root/"), 2);
                                 if(count($directories) > 0) {
                                     foreach($directories as $direct) {
+                                        $totalSize = 0;
                                         $directory = "./root/" . $direct;
                                         $directorySize = filesize($directory);
                                         $directoryTimeModify = date("F d Y H:i:s.", filemtime($directory));
@@ -249,7 +251,7 @@ createDirectory();
                                         foreach($files as $pos => $file) {
                                             $rootSize = "./root/" . $direct . "/" . $file;
                                             $showSize = filesize($rootSize);
-                                            // print_r($showSize."<br>hola<br>");
+                                            $totalSize += $showSize;
                                         }
                                         echo "<table  class='table table-striped table-hover table-sm mb-0'>
                                             <tbody>
@@ -257,8 +259,8 @@ createDirectory();
                                             <tr>
                                                 <td>$direct</td>
                                                 <td>$directoryCreationDate</td>
-                                                <td class=''>$directoryTimeModify</td>
-                                                <td>'$showSize'</td>
+                                                <td>$directoryTimeModify</td>
+                                                <td>" . fileSizeUnit($totalSize) . "</td>
                                             </tr>
                     
         
