@@ -227,11 +227,11 @@ createDirectory();
                                 
                                 <thead>
                                     <tr>
-                                        <th>Name <i class="bx bx-up-arrow-alt ms-2"></i>
+                                        <th class="col-3">Name <i class="bx bx-up-arrow-alt ms-2"></i>
                                         </th>
-                                        <th>Creation date</th>
-                                        <th>Last Modified</th>
-                                        <th>Size</th>
+                                        <th class="col-3">Creation date</th>
+                                        <th class="col-4">Last Modified</th>
+                                        <th class="col-3">Size</th>
                                     </tr>
                                 </thead>
                             </table>
@@ -257,10 +257,10 @@ createDirectory();
                                             <tbody>
         
                                             <tr>
-                                                <td>$direct</td>
-                                                <td>$directoryCreationDate</td>
-                                                <td>$directoryTimeModify</td>
-                                                <td>" . fileSizeUnit($totalSize) . "</td>
+                                                <td class='col-3'>$direct</td>
+                                                <td class='col-3'>$directoryCreationDate</td>
+                                                <td class='col-4'>$directoryTimeModify</td>
+                                                <td class='col-3'>" . fileSizeUnit($totalSize) . "</td>
                                             </tr>
                     
         
